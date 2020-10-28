@@ -32,24 +32,44 @@
     <!-- Pop-Up Desplegable -->
 
     <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
 
 
-<!-- Modal -->
+<!-- Modal Ok -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Registro de solicitud</h5>
       </div>
       <div class="modal-body">
-        ...
+        La solicitud se ingresó con éxito. Su numero de pedido es:
+        <div>
+            <h2 id="numero_orden" style="margin-top: 10px" class="numero_orden"></h2>
+        </div>
+        
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer" style="text-align: center;">
+        <button type="button" class="btn btn-primary" style="text-align: center;" data-dismiss="modal" onclick="cleanPedido()">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Error -->
+<div class="modal fade" id="exampleModalError" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Registro de solicitud</h5>
+      </div>
+      <div class="modal-body">
+        Error al ingresar solicitud. Intente nuevamente
+      </div>
+      <div class="modal-footer" style="text-align: center;">
+        <button type="button" class="btn btn-primary" style="text-align: center;" data-dismiss="modal" onclick="cleanPedido()">Aceptar</button>
       </div>
     </div>
   </div>

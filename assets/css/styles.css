@@ -32,6 +32,24 @@ span.dorado { color:#FFCD00; font-family: 'Tangerine', cursive; font-size:140px 
 
 }
 
+.modal-header {
+    display: block;
+}
+
+.modal-body {
+    text-align: center !important;
+}
+
+.modal-footer {
+    display: block;
+}
+
+.numero_orden {
+
+    text-align: center;
+    font-size: 22px;
+}
+
 .campo_form {
 
     font-size: 20px;

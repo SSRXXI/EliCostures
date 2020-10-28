@@ -28,6 +28,32 @@
 </head>
 
 <body>
+
+    <!-- Pop-Up Desplegable -->
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal Error -->
+<div class="modal fade" id="exampleModalError" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Consulta de estado</h5>
+      </div>
+      <div class="modal-body">
+        No se encontró el pedido, revise su numero de orden o contactenos
+      </div>
+      <div class="modal-footer" style="text-align: center;">
+        <button type="button" class="btn btn-primary" style="text-align: center;" data-dismiss="modal" onclick="cleanPedido()">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <nav class="smart-scroll navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container" id="">
             <a href="http://192.168.1.83/"><img src="assets/images/logo-dark.png" class="logo-brand" alt="logo"></a>
@@ -35,14 +61,10 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <img src="assets/images/menu.svg">
             </button>
-
             <div class="collapse navbar-collapse backblanco" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" id="inicio_">
-                        <a class="nav-link" href="#Inicio"><h4>Inicio</h4></a>
-                    </li>
-                    <li class="nav-item" id="servicio_">
-                        <a class="nav-link" href="#Servicio"><h4>Servicios</h4></a>
+                        <a class="nav-link" href="../index.html"><h4>Inicio</h4></a>
                     </li>
                     <li class="nav-item" id="contacto_">
                         <a class="nav-link " href="#Contacto"><h4>Contacto</h4></a>
@@ -51,7 +73,6 @@
             </div>
         </div>
     </nav>
-
     <section id="Inicio">
     <div id="fondo" class="" data-ride="carousel">
         <div class="carouselsss-inner">
@@ -68,18 +89,19 @@
         </div>
     </div>
     </section>
-
     <section id="opcion_pedidos">
         <div class="container" style="margin-top: 60px">
-            <label for="exampleFormControlTextarea1" class="campo_form" style="color: #BA0000; font-size: 26px">Ingrese n° de pedido</label>
-                    <form name="webpay" method="POST" action="http://192.168.1.83:3000"></form>
-                    <input type="nombre" class="form-control" name="nombre" id="exampleFormControlInput1" placeholder="00000000">
+            <label for="exampleFormControlTextarea1" class="campo_form" style="color: #BA0000; font-size: 26px">Ingrese n° de pedido
+            </label>
+            <form name="webpay" method="POST" action="http://192.168.1.83:3000/pedidos-detalle">
+            <input type="nombre" class="form-control" name="numero_orden" id="exampleFormControlInput1" placeholder="00000000">
                     <button class="btn btn-lg btn-primary btn-block" style="margin-top: 10px" type="submit">Consultar pedido</button>
+                    </form>
         </div>
     </section>
 
-    <br><br><br>
-    <section id="pricing" class="divider">
+    <br><br><br><br><br><br><br><br><br><br>
+    <section id="Contacto" class="divider">
         <div class="container">
             <div class="content-center">
                 <h2>Contacto:</h2>
